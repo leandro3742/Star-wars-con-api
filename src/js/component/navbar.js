@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
@@ -43,16 +42,6 @@ export const Navbar = () => {
 								</div>
 							);
 						})}
-						{/* <a className="dropdown-item" href="#">
-							Action
-						</a> */}
-						{/* <a className="dropdown-item" href="#">
-							Another action
-						</a> */}
-						{/* <div className="dropdown-divider" /> */}
-						{/* <a className="dropdown-item" href="#">
-							Something else here
-						</a> */}
 					</div>
 				</div>
 			</div>
