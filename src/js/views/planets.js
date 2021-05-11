@@ -3,14 +3,14 @@ import { useParams, Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
-export const Character = () => {
+export const Planets = () => {
 	const { id } = useParams();
 	const { store, actions } = useContext(Context);
 
 	const [datos, setDatos] = useState([]);
 	const llamarCharacter = async () => {
 		try {
-			const res = await fetch("https://www.swapi.tech/api/people/" + id);
+			const res = await fetch("https://www.swapi.tech/api/planets/" + id);
 			const data = await res.json();
 			setDatos(data.result.properties);
 		} catch (error) {

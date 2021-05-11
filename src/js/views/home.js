@@ -8,23 +8,33 @@ import { Card } from "../component/card";
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
-	const styleContainer = {
-		overflowX: "scroll"
-	};
-	const styleCard = {
-		width: "750px",
-		border: "1px solid grey",
-		borderRadius: "5px"
-	};
 	return (
-		<div style={styleContainer} className="d-flex">
-			{store.people.map((elem, indice) => {
-				return (
-					<div key={indice}>
-						<Card props={elem} />
-					</div>
-				);
-			})}
-		</div>
+		<React.Fragment>
+			<div style={{ overflowX: "scroll" }} className="mt-5">
+				<h2 className="text-warning ml-2">Character</h2>
+				<div className="mt-2 d-flex">
+					{store.people.map((elem, indice) => {
+						return (
+							<div key={indice}>
+								<Card props={elem} tarjeta={"people"} />
+							</div>
+						);
+					})}
+				</div>
+			</div>
+
+			<div style={{ overflowX: "scroll" }} className="mt-5">
+				<h2 className="text-danger ml-2">Planets</h2>
+				<div className="d-flex mt-2">
+					{store.planets.map((elem, indice) => {
+						return (
+							<div key={indice}>
+								<Card props={elem} tarjeta={"planets"} />
+							</div>
+						);
+					})}
+				</div>
+			</div>
+		</React.Fragment>
 	);
 };

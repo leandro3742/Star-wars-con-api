@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 export const Card = props => {
 	const elem = props;
 	const { store, actions } = useContext(Context);
-	console.log("elem", elem);
+
 	const styleContainer = {
 		overflowX: "scroll"
 	};
@@ -15,6 +15,7 @@ export const Card = props => {
 		border: "1px solid grey",
 		borderRadius: "5px"
 	};
+
 	return (
 		<div className="card-body mx-3" style={styleCard}>
 			<div className="d-flex">
@@ -27,7 +28,7 @@ export const Card = props => {
 				delectus fugiat.
 			</h6>
 			<div className="d-flex justify-content-between">
-				<Link to={`/person/${elem.props.uid}`} className="card-link">
+				<Link to={`/${elem.tarjeta}/${elem.props.uid}`} className="card-link">
 					More info+
 				</Link>
 				<button
