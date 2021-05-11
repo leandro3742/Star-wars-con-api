@@ -1,18 +1,25 @@
 // import { LoaderOptionsPlugin } from "webpack";
 
 const getState = ({ getStore, getActions, setStore }) => {
-	let arr = [];
 	return {
 		store: {
 			planets: [],
 			people: [],
-			arrPerson: [],
 			favourites: []
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			addFavourites: fav => {
+				let store = getStore();
+				setStore({ favourites: [...store.favourites, fav] });
+			},
+			deleteFavourites: fav => {
+				function eliminarFav(arr) {
+					if (arr === fav) return false;
+					else return true;
+				}
+				let store = getStore();
+				let arr = store.favourites.filter(eliminarFav);
+				setStore({ favourites: arr });
 			},
 			loadSomeData: () => {
 				const obtenerPlanetas = async () => {
@@ -28,31 +35,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					try {
 						const res = await fetch("https://www.swapi.tech/api/people");
 						const data = await res.json();
-						arr = data.results;
-						console.log(arr);
 						setStore({ people: data.results });
-						llamarLoop();
-					} catch (error) {
-						console.log(error);
-					}
-				};
-
-				const moreInfo = async indice => {
-					try {
-						const res = await fetch("https://www.swapi.tech/api/people/" + indice);
-						const data = await res.json();
-						let aux = data.result.properties;
-						arr.push(aux);
-						setStore({ arrPerson: arr });
 					} catch (error) {
 						console.log(error);
 					}
 				};
 				obtenerPlanetas();
 				obtenerPersonajes();
-				for (let i = 0; i < 10; i++) {
-					moreInfo(i + 1);
-				}
 			}
 		}
 	};
