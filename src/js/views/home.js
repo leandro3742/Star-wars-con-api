@@ -24,7 +24,7 @@ export const Home = () => {
 			</div>
 
 			<div style={{ overflowX: "scroll" }} className="mt-5">
-				<h2 className="text-danger ml-2">Planets</h2>
+				<h2 className="text-warning ml-2">Planets</h2>
 				<div className="d-flex mt-2">
 					{store.planets.map((elem, indice) => {
 						return (

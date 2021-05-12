@@ -31,7 +31,7 @@ export const People = () => {
 	};
 	return (
 		<React.Fragment>
-			<div className="d-flex justify-content-between">
+			<div className="d-flex justify-content-between text-white">
 				<img
 					src="https://i.blogs.es/1baf64/star-wars-ultimo-trailer/1366_2000.jpeg"
 					style={{ width: "500px", borderRadius: "15px" }}
@@ -53,28 +53,28 @@ export const People = () => {
 			</div>
 			<div style={estiloLineaDivisoria} />
 			<div style={{ marginLeft: "5%" }} className="d-flex justify-content-center">
-				<div className="d-flex flex-column align-items-center mx-3">
-					<h6 className="text-danger">Nombre</h6>
+				<div className="d-flex flex-column align-items-center mx-3 text-danger">
+					<h6>Nombre</h6>
 					<h6 className="ml-2">{datos.name}</h6>
 				</div>
-				<div className="d-flex flex-column align-items-center mx-3">
-					<h6 className="text-danger">Genero</h6>
+				<div className="d-flex flex-column align-items-center mx-3 text-danger">
+					<h6>Genero</h6>
 					<h6 className="ml-2">{datos.gender}</h6>
 				</div>
-				<div className="d-flex flex-column align-items-center mx-3">
-					<h6 className="text-danger">Birth</h6>
+				<div className="d-flex flex-column align-items-center mx-3 text-danger">
+					<h6>Birth</h6>
 					<h6 className="ml-2">{datos.birth_year}</h6>
 				</div>
-				<div className="d-flex flex-column align-items-center mx-3">
-					<h6 className="text-danger">Color de ojos</h6>
+				<div className="d-flex flex-column align-items-center mx-3 text-danger">
+					<h6>Color de ojos</h6>
 					<h6 className="ml-2">{datos.eye_color}</h6>
 				</div>
-				<div className="d-flex flex-column align-items-center mx-3">
-					<h6 className="text-danger">Color de piel</h6>
+				<div className="d-flex flex-column align-items-center mx-3 text-danger">
+					<h6>Color de piel</h6>
 					<h6 className="ml-2">{datos.skin_color}</h6>
 				</div>
-				<div className="d-flex flex-column align-items-center mx-3">
-					<h6 className="text-danger">Color de pelo</h6>
+				<div className="d-flex flex-column align-items-center mx-3 text-danger">
+					<h6>Color de pelo</h6>
 					<h6 className="ml-2">{datos.hair_color}</h6>
 				</div>
 			</div>
