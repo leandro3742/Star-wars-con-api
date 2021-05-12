@@ -8,8 +8,7 @@ export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	function alerta() {
 		Swal.fire({
-			title: "Sweet!",
-			text: "Modal with a custom image.",
+			title: "Que la fuerza te acompañe",
 			imageUrl: gif,
 			imageWidth: 500,
 			imageHeight: 300,
