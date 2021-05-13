@@ -15,8 +15,9 @@ export const Navbar = () => {
 			imageAlt: "Custom image"
 		});
 	}
+
 	return (
-		<nav className="navbar mb-3">
+		<nav className="navbar border border-primary border-top-0 border-left-0 border-right-0 mb-3">
 			<div className="col-3">
 				<Link to="/">
 					<img
@@ -42,7 +43,7 @@ export const Navbar = () => {
 							data-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false">
-							Dropdown
+							Favourites {store.favourites.length}
 						</a>
 						<div className="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
 							{store.favourites.map((elem, indice) => {
