@@ -7,7 +7,7 @@ import { Card } from "../component/card";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-
+	console.log(process.env.BACKEND_URL);
 	return (
 		<React.Fragment>
 			<div style={{ overflowX: "scroll" }} className="mt-5">
